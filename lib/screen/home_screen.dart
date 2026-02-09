@@ -109,9 +109,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             controller: editController,
                             btnTitle: "Update",
                             onTab: () {
-                              updateItem(key, {
+
+                              var updateData = {
                                 'title': editController.text,
-                              });
+                              };
+                              updateItem(key, updateData);
                               Navigator.pop(context);
                               editController.clear();
                             },
